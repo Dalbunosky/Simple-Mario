@@ -1,0 +1,111 @@
+*{
+    padding: 0;
+    margin: 0;
+    background-color: transparent;
+}
+
+#frame{
+    width: 1000px;
+    height: 200px;
+    border: 1px solid black;
+    background: url("./images/mario_background.png");
+    background-size: contain;
+    overflow: hidden;
+    position: relative;
+}
+
+#gameOver{
+    color: red;
+    font: bold 100px Arial, sans-serif;
+    float:left;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 50px);
+    white-space: nowrap;
+    display: none;
+}
+
+#character{
+    width: 30px;
+    height: 50px;
+    position: relative;
+    top: 150px;
+}
+
+#mario{
+    object-fit: cover;
+    /* border: 1px solid black; */
+    width: 100%;
+    height: 100%;
+
+}
+.animate{
+    animation: jumping 500ms;
+}
+
+@keyframes jumping{
+    0%{top:150px;}
+    30%{top:75px;}
+    50%{top:65px;}
+    70%{top:75px;}
+    100%{top:150px;}
+}
+
+#cactus{
+    /* border: 1px solid black; */
+    width: 40px;
+    height: 60px;
+    position: relative;
+    top: 90px;
+    left: 960px;
+    background: transparent url("./images/cactus.gif") no-repeat center;
+    background-size: cover;
+    object-position: bottom;
+    animation: none;
+    z-index: 2;
+}
+
+@keyframes cactus{
+    0%{left:980px;}
+    100%{left:-25px;}
+}
+
+.mushroom{
+    width: 20px;
+    height: 20px;
+    /* background-color: aquamarine; */
+    position: absolute;
+    top: 180px;
+    left: 980px;
+    background: url("./images/walking_mushroom.gif");
+    background-size: contain;
+    /* animation: mushroom 1s infinite linear; */
+}
+
+/* @keyframes mushroom{
+    0%{left:980px;}
+    100%{left:-40px;}
+} */
+
+button, .button{
+    width: 200px;
+    height: 50px;
+    font: 35px Arial, sans-serif;
+    color: white;
+    background-color: orange;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    text-align: center;
+}
+.button p{
+    margin: auto;
+}
+
+.display-stat{
+    font: 20px Comic Sans MS;
+    font-weight: bold;
+    color: green;
+    display:inline-block
+}

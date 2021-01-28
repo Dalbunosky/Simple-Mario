@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" onmousedown="jump()">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <title>Document</title>
+    <link rel="stylesheet" href="simple-mario.css">
+</head>
+<body>
+    <div id="board">
+        <!-- <button id="start" class="button">Start game</button> -->
+        <div id="start" class="button"><p id="startBtnTxt">Start game</p></div>
+        <p class="display-stat">Score: <em id="score">0</em></p>
+        <p class="display-stat">Time: <em id="time">0</em>s</p>
+        <p class="display-stat">Highscore: <em id="highScore">0</em>, <em id="highTime">0</em>s</p>
+        <div id="frame">
+            <span id="gameOver">Game Over.</span>
+            <div id="character">
+                <img id="mario" src="images/running_Mario.gif" alt="Mario">
+            </div>
+            <div id="cactus">
+            </div>
+        </div>
+    </div>
+    <!-- <button id="test">Test Me</button> -->
+    <script src="game.js"></script>
+</body>
+</html>
