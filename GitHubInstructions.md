@@ -4,13 +4,13 @@ Starting new project on github:
 
 git init
 
-git remote add origin https://github.com/Dalbunosky/Simple-Mario
+git remote add origin https://github.com/Dalbunosky/Simple-Mario.git
 
 --------------
 To start work:
     (Make sure you're on your branch)
 
-    git pull https://github.com/Dalbunosky/Simple-Mario
+    git pull https://github.com/Dalbunosky/Simple-Mario.git
 
 --------------
 To submit work:
@@ -22,7 +22,7 @@ To submit work:
 
     git checkout master 
 
-    git pull https://github.com/Dalbunosky/Simple-Mario
+    git pull https://github.com/Dalbunosky/Simple-Mario.git
 
     git checkout ______ <-- your branch's name
 
