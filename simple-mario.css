@@ -5,7 +5,7 @@
 }
 
 #frame{
-    width: 1000px;
+    width: 100%;
     height: 200px;
     border: 1px solid black;
     background: url("./images/mario_background.png");
@@ -57,7 +57,7 @@
     height: 60px;
     position: relative;
     top: 90px;
-    left: 960px;
+    left: 100%;
     background: transparent url("./images/cactus.gif") no-repeat center;
     background-size: cover;
     object-position: bottom;
@@ -66,7 +66,7 @@
 }
 
 @keyframes cactus{
-    0%{left:980px;}
+    0%{left:100%;}
     100%{left:-25px;}
 }
 
@@ -76,7 +76,7 @@
     /* background-color: aquamarine; */
     position: absolute;
     top: 180px;
-    left: 980px;
+    left: 100%;
     background: url("./images/walking_mushroom.gif");
     background-size: contain;
     /* animation: mushroom 1s infinite linear; */
@@ -86,6 +86,32 @@
     0%{left:980px;}
     100%{left:-40px;}
 } */
+
+body{
+    margin: 0px;
+    padding: 0px;
+    background-color: bisque;
+    display: flex;
+    vertical-align: baseline;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+#specs-or-stats{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 10px;
+}
+
+h1{
+    font: 60px Arial;
+    color: red;
+    font-weight: bold;
+    /* margin: 10px; */
+    align-self: center;
+}
 
 button, .button{
     width: 200px;
@@ -107,5 +133,6 @@ button, .button{
     font: 20px Comic Sans MS;
     font-weight: bold;
     color: green;
-    display:inline-block
+    display:inline-block;
+    margin: 10px;
 }
