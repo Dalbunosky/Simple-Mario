@@ -1,10 +1,15 @@
 let character = document.getElementById("character");
 let cactus = document.getElementById("cactus");
 let scoreGiven = false, startTime, score = 0, highScore = 0, highTime = 0;
+const ouch = new Audio('../audio/ouch.mp3'), marioJump = new Audio('../audio/mario_jump.wav');
+console.log(marioJump);
+console.log(marioJump.currentTime);
+marioJump.preload = 'auto';
+ouch.preload = 'auto';
 document.getElementById("start").addEventListener("click", startGame);
 document.addEventListener("keydown", 
     e=> {
-        if(e.keyCode === 32) jump();
+        if((e.key === 32) || (e.keyCode === 32)) jump();
     }
 );
 
@@ -19,6 +24,11 @@ function startGame(){
     window.requestAnimationFrame(run);
 }
 
+function playSound(sound){
+    sound.currentTime = 0;
+    sound.play().then(() => {}).catch(() => {});
+}
+
 function run(testTime){
     let characterTop = parseInt(window.getComputedStyle(character).getPropertyValue("top"));
     generateMushroom();
@@ -28,6 +38,7 @@ function run(testTime){
     // mushroomMove(characterTop)
     // if(cactusCheck(characterTop)){
     if(mushroomMove(characterTop) || cactusCheck(characterTop)){
+        playSound(ouch);
         cactus.style.left = `${cactus.offsetLeft}px`;
         cactus.style.animation = "none";
         if(highScore <= score){
@@ -46,6 +57,7 @@ function run(testTime){
 function jump(){
     if(character.classList != "animate"){
         character.classList.add("animate");
+        playSound(marioJump);
     }
     setTimeout(()=>{character.classList.remove("animate");}, 500)
 }

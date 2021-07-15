@@ -33,3 +33,7 @@ If Mario/Luigi jumps and lands on top of a mushroom, the mushroom can be deemed 
 ### A single sun 
 
 The current background will display several suns if the game box goes over the length of the background. The background should be edited to remove the Sun, with a single Sun image placed instead on top of the background, giving a scenario that is closer to reality.
+
+# Attributions
+
+  * Sound effects are CC licensed from [freesound.org](https://freesound.org/).
