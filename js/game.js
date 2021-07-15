@@ -1,9 +1,7 @@
 let character = document.getElementById("character");
 let cactus = document.getElementById("cactus");
 let scoreGiven = false, startTime, score = 0, highScore = 0, highTime = 0;
-const ouch = new Audio('../audio/ouch.mp3'), marioJump = new Audio('../audio/mario_jump.wav');
-console.log(marioJump);
-console.log(marioJump.currentTime);
+const ouch = new Audio('./audio/ouch.wav'), marioJump = new Audio('./audio/mario_jump.wav');
 marioJump.preload = 'auto';
 ouch.preload = 'auto';
 document.getElementById("start").addEventListener("click", startGame);
@@ -25,7 +23,9 @@ function startGame(){
 }
 
 function playSound(sound){
+    sound.volume = 0.2;
     sound.currentTime = 0;
+    // sound.play();
     sound.play().then(() => {}).catch(() => {});
 }
 
